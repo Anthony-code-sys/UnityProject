@@ -41,7 +41,7 @@ public class PlayerController : MonoBehaviour
     {
         scoreText.text = "Nectar: " + count.ToString();
         
-        if (count >= 5) 
+        if (count >= 7) 
         {
             winTextObject.SetActive(true);
         }
