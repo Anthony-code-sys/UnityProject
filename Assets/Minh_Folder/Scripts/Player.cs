@@ -1,45 +1,45 @@
 using UnityEngine;
-using UnityEngine.InputSystem; // Required for Input System
+using UnityEngine.InputSystem; 
 
 public class Player : MonoBehaviour
 {
-    public InputActionAsset InputActions; // Reference to the Input Action Asset
+    public InputActionAsset InputActions; 
 
-    private InputAction m_moveAction; // Reference to the move action
-    private InputAction m_lookAction; // Reference to the look action
-    private InputAction m_jumpAction; // Reference to the jump action
+    private InputAction m_moveAction; 
+    private InputAction m_lookAction; 
+    private InputAction m_jumpAction; 
 
     private Vector2 m_moveAmt;
     private Vector2 m_lookAmt;
 
-    private Animator m_animator; // Reference to the Animator component
-    private Rigidbody m_rigidbody; // Reference to the Rigidbody component
+    private Animator m_animator; 
+    private Rigidbody m_rigidbody; 
 
-    public float WalkSpeed = 5f; // Speed of the player when walking
-    public float RotateSpeed = 5f; // Speed of the player when rotating
-    public float JumpSpeed = 5f; // Speed of the player when jumping
+    public float WalkSpeed = 5f; 
+    public float RotateSpeed = 5f; 
+    public float JumpSpeed = 5f; 
 
     public void Start()
     {
-        //InputActions = Resources.Load<InputActionAsset>("InputActions"); // Load the Input Action Asset from Resources folder
+        InputActions = Resources.Load<InputActionAsset>("InputActions"); 
     }
 
 
     private void OnEnable()
     {
-        InputActions.FindActionMap("Player").Enable(); // Enable the Player action map
+        InputActions.FindActionMap("Butterfly").Enable(); 
     }
 
     private void OnDisable()
     {
-        InputActions.FindActionMap("Player").Disable(); // Disable the Player action map
+        InputActions.FindActionMap("Butterfly").Disable(); 
     }
 
     private void Awake()
     {
-        m_moveAction = InputSystem.actions.FindAction("Move"); // Find the Move action in the Input Action Asset
-        m_lookAction = InputSystem.actions.FindAction("Look"); // Find the Look action in the Input Action Asset
-        m_jumpAction = InputSystem.actions.FindAction("Jump"); // Find the Jump action in the Input Action Asset
+        m_moveAction = InputSystem.actions.FindAction("Move"); 
+        m_lookAction = InputSystem.actions.FindAction("Look"); 
+        m_jumpAction = InputSystem.actions.FindAction("Jump"); 
 
         m_rigidbody = GetComponent<Rigidbody>(); // Get the Rigidbody component attached to the player
         //m_animator = GetComponent<Animator>(); // Get the Animator component attached to the player
@@ -65,8 +65,8 @@ public class Player : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Walking(); // Call the Walking method in FixedUpdate for physics calculations
-        Rotating(); // Call the Rotating method in FixedUpdate for physics calculations
+        Walking(); 
+        Rotating(); 
     }
 
     private void Walking()
@@ -77,11 +77,16 @@ public class Player : MonoBehaviour
 
     private void Rotating()
     {
-        if (m_moveAmt.y != 0) // Check if the player is moving on Y
+        if (m_moveAmt.y != 0) 
         {
-            float rotationAmount = m_lookAmt.x * RotateSpeed * Time.deltaTime; // Calculate the rotation amount based on the input and speed
+            float rotationAmount = m_lookAmt.x * RotateSpeed * Time.deltaTime; 
             Quaternion deltaRotation = Quaternion.Euler(0, rotationAmount, 0);
-            m_rigidbody.MoveRotation(m_rigidbody.rotation * deltaRotation); // Rotate the Rigidbody based on the input and speed
+            m_rigidbody.MoveRotation(m_rigidbody.rotation * deltaRotation); 
         }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        other.gameObject.SetActive(false);
     }
 }
