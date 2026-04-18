@@ -777,15 +777,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 143534}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.45451942, y: 0.29883623, z: -0.5416752, w: 0.64085644}
-  m_LocalPosition: {x: 1.5299072, y: 1.445343, z: 5.276375}
+  m_LocalRotation: {x: -0.5523671, y: -0.46941733, z: -0.41949755, w: 0.54640627}
+  m_LocalPosition: {x: 2.44, y: 1.34, z: 2.87}
   m_LocalScale: {x: 1, y: 0.99999994, z: 0.99999994}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 438454}
   - {fileID: 493954}
   m_Father: {fileID: 421922}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -85.926, y: -135.782, z: 57.836}
 --- !u!1 &144926
 GameObject:
   m_ObjectHideFlags: 0
@@ -1670,15 +1670,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 181714}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.241845, y: -0.4545194, z: -0.66446334, w: 0.5416749}
-  m_LocalPosition: {x: 1.920044, y: -1.275177, z: 5.1062737}
+  m_LocalRotation: {x: -0.44735688, y: -0.61274046, z: -0.55573565, w: 0.3399689}
+  m_LocalPosition: {x: 2.14, y: 1.1, z: 5.47}
   m_LocalScale: {x: 1, y: 1, z: 0.99999994}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 480818}
   - {fileID: 478954}
   m_Father: {fileID: 421922}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -80.136, y: 151.933, z: -263.988}
 --- !u!1 &186998
 GameObject:
   m_ObjectHideFlags: 0
@@ -2088,7 +2088,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 197806}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0.7071068, w: 0.7071068}
+  m_LocalRotation: {x: -0.5, y: -0.5, z: -0.5, w: 0.5}
   m_LocalPosition: {x: 1.53302, y: 0.0524292, z: 4.14856}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2104,7 +2104,7 @@ Transform:
   - {fileID: 434406}
   - {fileID: 426458}
   m_Father: {fileID: 421922}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: -90}
 --- !u!1 &198222
 GameObject:
   m_ObjectHideFlags: 0

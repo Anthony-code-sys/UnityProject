@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 
 public class Movement : MonoBehaviour
 {
- 
+
     public InputActionAsset InputActions;
 
     private InputAction m_moveAction;
@@ -19,12 +19,12 @@ public class Movement : MonoBehaviour
 
     private void OnEnable()
     {
-        InputActions.FindActionMap("Butterfly1").Enable();
+        InputActions.FindActionMap("Butterfly").Enable();
     }
 
     private void Ondisable()
     {
-        InputActions.FindActionMap("Butterfly1").Disable();
+        InputActions.FindActionMap("Butterfly").Disable();
     }
 
     private void Awake()
@@ -45,7 +45,7 @@ public class Movement : MonoBehaviour
 
     private void Walking()
     {
-        m_animator.SetFloat("Speed", m_moveAmt.y);
+        m_animator.SetFloat("WalkSpeed", m_moveAmt.y);
         m_rigidbody.MovePosition(m_rigidbody.position + transform.forward * m_moveAmt.y * WalkSpeed);
     }
 
@@ -56,6 +56,5 @@ public class Movement : MonoBehaviour
             float rotationAmount = m_lockAmt.x * RotateSpeed;
         }
     }
-    
-    }
 
+}
