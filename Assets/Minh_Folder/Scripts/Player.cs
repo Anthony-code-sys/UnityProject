@@ -57,7 +57,6 @@ public class Player : MonoBehaviour
     {
         m_moveAmt = m_moveAction.ReadValue<Vector2>(); 
         m_lookAmt = m_lookAction.ReadValue<Vector2>();
-
        
         }
 
