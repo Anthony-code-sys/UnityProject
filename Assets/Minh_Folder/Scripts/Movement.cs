@@ -1,4 +1,4 @@
- using UnityEngine;
+using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class Movement : MonoBehaviour
@@ -45,7 +45,7 @@ public class Movement : MonoBehaviour
 
     private void Walking()
     {
-        m_animator.SetFloat("WalkSpeed", m_moveAmt.y);
+        m_animator.SetFloat("Speed", m_moveAmt.y);
         m_rigidbody.MovePosition(m_rigidbody.position + transform.forward * m_moveAmt.y * WalkSpeed);
     }
 
