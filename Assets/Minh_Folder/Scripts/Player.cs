@@ -12,7 +12,7 @@ public class Player : MonoBehaviour
     private Vector2 m_moveAmt;
     private Vector2 m_lookAmt;
 
-    //private Animator m_animator; // Reference to the Animator component
+    private Animator m_animator; // Reference to the Animator component
     private Rigidbody m_rigidbody; // Reference to the Rigidbody component
 
     public float WalkSpeed = 5f; // Speed of the player when walking
